@@ -23,7 +23,8 @@
 
   <div class="field">
     <%= form.label :Płeć %>
-    <%= form.text_field :gender %>
+    <%= form.radio_button(:gender, 'K') %> Kobieta
+    <%= form.radio_button(:gender, 'M') %> Mężczyzna
   </div>
 
   <div class="field">
@@ -38,7 +39,9 @@
 
   <div class="field">
     <%= form.label :Trasa %>
-    <%= form.number_field :route_id %>
+    <%= form.radio_button(:route_id, 35) %> klasyczna 35 km
+    <%= form.radio_button(:route_id, 7) %> dziecięca 7 km
+
   </div>
 
   <div class="field">
@@ -53,9 +56,14 @@
 
   <div class="field">
     <%= form.label :Email %>
-    <%= form.text_field :email %>
+    <%= form.email_field :email %>
   </div>
-
+  <form action="...">
+  	<input type="checkbox" name="nazwa" value="wartość">Zgoda
+  </form>
+  <form action="...">
+	<input type="checkbox" name="nazwa" value="wartość">Rodo
+</form>
   <div class="actions">
     <%= form.submit :Prześlij %>
   </div>
