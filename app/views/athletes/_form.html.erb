@@ -58,12 +58,18 @@
     <%= form.label :Email %>
     <%= form.email_field :email %>
   </div>
-  <form action="...">
-  	<input type="checkbox" name="nazwa" value="wartość">Zgoda
-  </form>
-  <form action="...">
-	<input type="checkbox" name="nazwa" value="wartość">Rodo
-</form>
+
+  <div class="field">
+    <%= form.check_box :terms_accepted %>
+    <%= form.label "zapoznałem się z Regulaminem i akceptuję jego postanowienia" %>
+  </div>
+
+    <div class="field">
+      <%= form.check_box :gdpr_accepted %>
+      <%= form.label "Wyrażam zgodę na wykorzystanie i przetwarzanie moich danych osobowych" %>
+    </div>
+
+
   <div class="actions">
     <%= form.submit :Prześlij %>
   </div>
