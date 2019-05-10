@@ -1,7 +1,7 @@
 <%= form_with(model: athlete, local: true) do |form| %>
   <% if athlete.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(athlete.errors.count, "error") %> prohibited this athlete from being saved:</h2>
+      <h2><%= "Zgłoszenie nie może być przyjęte. Ilość błędów: #{athlete.errors.count}" %></h2>
 
       <ul>
       <% athlete.errors.full_messages.each do |message| %>
@@ -12,51 +12,52 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :first_name %>
+    <%= form.label :Imie %>
     <%= form.text_field :first_name %>
   </div>
 
   <div class="field">
-    <%= form.label :last_name %>
+    <%= form.label :Nazwisko %>
     <%= form.text_field :last_name %>
   </div>
 
   <div class="field">
-    <%= form.label :gender %>
+    <%= form.label :Płeć %>
     <%= form.text_field :gender %>
   </div>
 
   <div class="field">
-    <%= form.label :birthdate %>
-    <%= form.date_select :birthdate %>
+    <%= form.label :Data_urodzenia %>
+    <%= form.date_select(:birthdate, start_year: 1920, use_month_numbers: true, order: [:day, :month, :year]) %>
   </div>
 
   <div class="field">
-    <%= form.label :city %>
+    <%= form.label :Miasto %>
     <%= form.text_field :city %>
   </div>
 
   <div class="field">
-    <%= form.label :route_id %>
+    <%= form.label :Trasa %>
     <%= form.number_field :route_id %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
+    <%= form.label :Numer_telefonu %>
     <%= form.text_field :phone %>
   </div>
 
   <div class="field">
-    <%= form.label :team %>
+    <%= form.label :Drużyna %>
     <%= form.text_field :team %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label :Email %>
     <%= form.text_field :email %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :Prześlij %>
   </div>
+
 <% end %>
