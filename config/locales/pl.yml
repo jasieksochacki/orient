@@ -1,0 +1,42 @@
+pl:
+  hello: "Witaj świecie"
+
+  activerecord:
+    models:
+      athlete:
+        one: "Zawodnik"
+        few: "Zawodników"
+        many: "Zawodników"
+    attributes:
+      athlete:
+        first_name: "Imię"
+        last_name: "Nazwisko"
+        gender: "Płeć"
+        birthdate: "Data urodzenia"
+        city: "Miejscowość"
+        route_id: "Trasa"
+        phone: "Numer telefonu"
+        team: "Drużyna"
+        email: "Adres email"
+        terms_accepted: "Regulamin"
+        gdpr_accepted: "RODO"
+    errors:
+      models:
+        athlete:
+          attributes:
+            gender:
+              inclusion: "Musisz wybrać płeć"
+            birthdate:
+              blank: "Musisz podać datę urodzenia"
+            city :
+              blank: "Musisz podać miejscowość"
+            route_id:
+              blank: "musisz zaznaczyć trasę"
+            phone:
+              blank: "pole nie może być puste"
+            email:
+              blank: "musisz podac adres email"
+            terms_accepted:
+              accepted: "musisz wyrazic zgode"
+            gdpr_accepted:
+              accepted: "musisz wyrazic zgode"

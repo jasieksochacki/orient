@@ -12,45 +12,45 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Imię %>
+    <%= form.label :first_name %>
     <%= form.text_field :first_name %>
   </div>
 
   <div class="field">
-    <%= form.label :Nazwisko %>
+    <%= form.label :last_name %>
     <%= form.text_field :last_name %>
   </div>
 
   <div class="field">
-    <%= form.label :Płeć %>
+    <%= form.label :gender %>
     <%= form.radio_button(:gender, 'K') %> Kobieta
     <%= form.radio_button(:gender, 'M') %> Mężczyzna
   </div>
 
   <div class="field">
-    <%= form.label :Data_urodzenia %>
+    <%= form.label :birthdate %>
     <%= form.date_select(:birthdate, start_year: 1920, use_month_numbers: true, order: [:day, :month, :year]) %>
   </div>
 
   <div class="field">
-    <%= form.label :Miasto %>
+    <%= form.label :city %>
     <%= form.text_field :city %>
   </div>
 
   <div class="field">
-    <%= form.label :Trasa %>
+    <%= form.label :route_id %>
     <%= form.radio_button(:route_id, 35) %> klasyczna 35 km
     <%= form.radio_button(:route_id, 7) %> dziecięca 7 km
 
   </div>
 
   <div class="field">
-    <%= form.label :Numer_telefonu %>
+    <%= form.label :phone %>
     <%= form.text_field :phone %>
   </div>
 
   <div class="field">
-    <%= form.label :Drużyna %>
+    <%= form.label :team %>
     <%= form.text_field :team %>
   </div>
 
