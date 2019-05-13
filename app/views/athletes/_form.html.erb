@@ -10,10 +10,21 @@
       </ul>
     </div>
   <% end %>
-
+<!doctypehtml>
+<htmllang=``pl``>
+<head><title>Tytuł</title>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="Słowa kluczowe oddzielone przecinkami />
+  <meta name="description" content="Opis strony" />
+  <meta name="author" content="Twoje imię i nazwisko" />
+  <meta name="robots" content="all" />
+<link rel="stylesheet" href="assets/css/main.css"
+</head>
+<body>
   <div class="field">
     <%= form.label :first_name %>
     <%= form.text_field :first_name %>
+
   </div>
 
   <div class="field">
@@ -73,5 +84,7 @@
   <div class="actions">
     <%= form.submit :Prześlij %>
   </div>
+  </body>
+  </html>
 
 <% end %>
