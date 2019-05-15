@@ -14,7 +14,7 @@ class AthletesController < ApplicationController
 
   # GET /athletes/new
   def new
-    @athlete = Athlete.new
+    @athlete = Athlete.new(event_id: Event.first.id)
   end
 
   # GET /athletes/1/edit
@@ -69,6 +69,7 @@ class AthletesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def athlete_params
-      params.require(:athlete).permit(:first_name, :last_name, :gender, :birthdate, :city, :route_id, :phone, :team, :email, :terms_accepted, :gdpr_accepted)
+      params.require(:athlete).permit(:first_name, :last_name, :gender, :birthdate, :city, :route_id, :phone,
+                                      :team, :email, :terms_accepted, :gdpr_accepted, :event_id)
     end
 end

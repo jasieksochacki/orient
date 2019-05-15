@@ -10,17 +10,9 @@
       </ul>
     </div>
   <% end %>
-<!doctypehtml>
-<htmllang=``pl``>
-<head><title>Tytuł</title>
-  <meta charset="UTF-8" />
-  <meta name="keywords" content="Słowa kluczowe oddzielone przecinkami />
-  <meta name="description" content="Opis strony" />
-  <meta name="author" content="Twoje imię i nazwisko" />
-  <meta name="robots" content="all" />
-<link rel="stylesheet" href="assets/css/main.css"
-</head>
-<body>
+
+  <%= form.hidden_field(:event_id) %>
+
   <div class="field">
     <%= form.label :first_name %>
     <%= form.text_field :first_name %>
@@ -50,8 +42,8 @@
 
   <div class="field">
     <%= form.label :route_id %>
-    <%= form.radio_button(:route_id, 35) %> klasyczna 35 km
-    <%= form.radio_button(:route_id, 7) %> dziecięca 7 km
+    <%= form.radio_button(:route_id, 1) %> klasyczna 35 km
+    <%= form.radio_button(:route_id, 2) %> dziecięca 7 km
 
   </div>
 

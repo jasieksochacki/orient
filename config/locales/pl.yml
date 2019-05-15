@@ -5,8 +5,19 @@ pl:
     models:
       athlete:
         one: "Zawodnik"
-        few: "Zawodników"
+        few: "Zawodnicy"
         many: "Zawodników"
+        other: "Zawodnicy"
+      event:
+        one: "Impreza"
+        few: "Imprezy"
+        many: "Imprez"
+        other: "Imprezy"
+      route:
+        one: "Trasa"
+        few: "Trasy"
+        many: "Tras"
+        other: "Trasy"
     attributes:
       athlete:
         first_name: "Imię"
@@ -20,6 +31,13 @@ pl:
         email: "Adres email"
         terms_accepted: "Regulamin"
         gdpr_accepted: "RODO"
+      event:
+        name: "Nazwa"
+        event_date: "Data imprezy"
+        last_entries_date: "Termin zgłoszeń"
+      routes:
+        name: "Nazwa"
+        distance: "Długość w km"
     errors:
       models:
         athlete:
