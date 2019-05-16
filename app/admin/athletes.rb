@@ -2,7 +2,7 @@ ActiveAdmin.register Athlete do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-# permit_params :list, :of, :attributes, :on, :model
+  permit_params :first_name, :last_name, :gender, :birthdate, :city, :route_id, :phone, :team, :email, :events
 #
 # or
 #
@@ -11,5 +11,18 @@ ActiveAdmin.register Athlete do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+  index do
+    selectable_column
+    column :id
+    column :first_name
+    column :last_name do |athlete|
+      link_to(athlete.last_name, admin_athlete_path(athlete))
 
-end
+    end
+
+
+
+
+    end
+    
+  end
