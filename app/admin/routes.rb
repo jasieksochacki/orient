@@ -25,7 +25,7 @@ ActiveAdmin.register Route do
       row("Ilość zawodników") do |route|
         route.athletes.count
       end
-            panel("Zawodnicy") do
+      panel ("Zawodnicy") do
                 table_for route.athletes.each do
                   column("Imię i nazwisko") do |athlete|
                     link_to(athlete.first_name + ' ' + athlete.last_name, admin_athlete_path(athlete))
