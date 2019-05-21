@@ -53,9 +53,13 @@ Dziecięcy: ok. 7 km</li>
       <div class="features">
         <section class="content">
           <span class="icon-wrapper major"><span class="icon fa-pencil"></span></span>
-          <h3>Dusiołek 2019</h3>
+          <h3>Zgłoszenia</h3>
           <ul class="actions">
-            <li><a href="/athletes/new" class="button">Formularz zgłoszeniowy</a></li>
+            <% Event.active.each do |event| %>
+            <li>
+              <%= link_to(event.name, new_athlete_path(event_id: event.id), class: "button") %>
+            </li>
+            <% end %>
         </section>
         <section class="content">
           <span class="icon-wrapper major"><span class="icon fa-paper-plane"></span></span>
