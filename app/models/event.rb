@@ -6,5 +6,8 @@ class Event < ApplicationRecord
   has_many :routes
   has_many :athletes
 
-  scope :active, -> { where("last_entries_date >= ?", Date.today) }
+  scope :active, -> do
+    where("last_entries_date >= ?", Date.today)
+    .order(:event_date)
+  end
 end

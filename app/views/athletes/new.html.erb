@@ -1,6 +1,6 @@
 <h1>Formularz zgłoszeniowy</h1>
-<h2><%= @event.name %></h2>
+<h2><%= @event.name%></h2>
+<h4><%= I18n.l( @event.event_date) %></h4>
 
 <%= render 'form', athlete: @athlete, routes: @routes %>
-
 <%= link_to 'Wróć', root_path %>
