@@ -14,7 +14,9 @@ class AthletesController < ApplicationController
 
   # GET /athletes/new
   def new
-    @athlete = Athlete.new(event_id: Event.first.id)
+    @event = Event.find(params[:event_id])
+    @routes = @event.routes
+    @athlete = Athlete.new(event_id: @event.id)
   end
 
   # GET /athletes/1/edit

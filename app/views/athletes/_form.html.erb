@@ -42,9 +42,10 @@
 
   <div class="field">
     <%= form.label :route_id %>
-    <%= form.radio_button(:route_id, 1) %> klasyczna 35 km
-    <%= form.radio_button(:route_id, 2) %> dziecięca 7 km
-
+    <% routes.each do |route| %>
+      <%= form.radio_button(:route_id, route.id) %>
+      <%= route.name %> 
+    <% end %>
   </div>
 
   <div class="field">
