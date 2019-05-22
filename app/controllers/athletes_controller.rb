@@ -27,7 +27,8 @@ class AthletesController < ApplicationController
   # POST /athletes.json
   def create
     @athlete = Athlete.new(athlete_params)
-
+    @event = @athlete.event
+    @routes = @event.routes
     respond_to do |format|
       if @athlete.save
         format.html { redirect_to @athlete, notice: 'Athlete was successfully created.' }
