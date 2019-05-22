@@ -1,42 +1,45 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Zgłoszenie zostało przesłane </h1>
+<h2><%= @event.name %></h2>
+<p>Do zobaczenia <%= I18n.l( @event.event_date) %></p>
 <p>
-  <strong>First name:</strong>
+  <strong>Imię:</strong>
   <%= @athlete.first_name %>
 </p>
 
 <p>
-  <strong>Last name:</strong>
+  <strong>Nazwisko:</strong>
   <%= @athlete.last_name %>
 </p>
 
 <p>
-  <strong>Gender:</strong>
+  <strong>Płeć:</strong>
   <%= @athlete.gender %>
 </p>
 
 <p>
-  <strong>Birthdate:</strong>
+  <strong>Data urodzenia:</strong>
   <%= @athlete.birthdate %>
-</p>
+
+
 
 <p>
-  <strong>City:</strong>
+  <strong>Miejscowość:</strong>
   <%= @athlete.city %>
 </p>
 
 <p>
-  <strong>Route:</strong>
-  <%= @athlete.route_id %>
+  <strong>Trasa:</strong>
+  <%= @athlete.route.name %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong>Numer telefonu:</strong>
   <%= @athlete.phone %>
 </p>
 
 <p>
-  <strong>Team:</strong>
+  <strong>Drużyna:</strong>
   <%= @athlete.team %>
 </p>
 
@@ -45,5 +48,4 @@
   <%= @athlete.email %>
 </p>
 
-<%= link_to 'Edit', edit_athlete_path(@athlete) %> |
-<%= link_to 'Back', athletes_path %>
+<%= link_to 'Dalej', root_path %>

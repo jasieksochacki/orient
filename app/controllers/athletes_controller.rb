@@ -10,6 +10,7 @@ class AthletesController < ApplicationController
   # GET /athletes/1
   # GET /athletes/1.json
   def show
+    @event = @athlete.event
   end
 
   # GET /athletes/new
@@ -31,7 +32,7 @@ class AthletesController < ApplicationController
     @routes = @event.routes
     respond_to do |format|
       if @athlete.save
-        format.html { redirect_to @athlete, notice: 'Athlete was successfully created.' }
+        format.html { redirect_to @athlete, notice: 'Zawodnik został stworzony' }
         format.json { render :show, status: :created, location: @athlete }
       else
         format.html { render :new }
@@ -74,5 +75,7 @@ class AthletesController < ApplicationController
     def athlete_params
       params.require(:athlete).permit(:first_name, :last_name, :gender, :birthdate, :city, :route_id, :phone,
                                       :team, :email, :terms_accepted, :gdpr_accepted, :event_id)
+
+
     end
 end

@@ -1,6 +1,22 @@
 pl:
   hello: "Witaj świecie"
-
+  date:
+    formats:
+      default: ! '%-d %B %Y'
+    month_names:
+      -
+      - stycznia
+      - lutego
+      - marca
+      - kwietnia
+      - maja
+      - czerwca
+      - lipca
+      - sierpnia
+      - września
+      - października
+      - listopada
+      - grudnia
   activerecord:
     models:
       athlete:
