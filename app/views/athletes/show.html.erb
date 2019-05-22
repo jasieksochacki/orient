@@ -1,7 +1,18 @@
-<p id="notice"><%= notice %></p>
-<h1>Zgłoszenie zostało przesłane </h1>
-<h2><%= @event.name %></h2>
-<p>Do zobaczenia <%= I18n.l( @event.event_date) %></p>
+<section id="main" class="wrapper">
+				<div class="inner">
+
+					<header class="major">
+            <p id="notice"><%= notice %></p>
+
+						<h1>Zgłoszenie zostało przesłane</h1>
+            <h2><%= @event.name %></h2>
+						<p>Do zobaczenia <%= I18n.l( @event.event_date) %></p>
+					</header>
+
+					<!-- Content -->
+					<div class="content">
+
+
 <p>
   <strong>Imię:</strong>
   <%= @athlete.first_name %>
@@ -20,7 +31,7 @@
 <p>
   <strong>Data urodzenia:</strong>
   <%= @athlete.birthdate %>
-
+</p>
 
 
 <p>
@@ -49,3 +60,5 @@
 </p>
 
 <%= link_to 'Dalej', root_path %>
+</div>
+</section>

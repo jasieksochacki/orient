@@ -1,4 +1,6 @@
 class AthletesController < ApplicationController
+  layout "dusiolek"
+
   before_action :set_athlete, only: [:show, :edit, :update, :destroy]
 
   # GET /athletes
