@@ -1,23 +1,26 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Lista startowa</h1>
+<h2><%= @event.name %></h2>
 
-<table>
+<table border="1px" class="start_list">
 <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
+    <tr style='background:#ddd;'>
+      <td>Numer
+        </td>
+      <td><span class='caps'>First name</td>
+      <td>Last name</td>
 
 
-      <th>City</th>
+      <td>City</td>
 
-      <th>Team</th>
+      <td>Team</td>
+      <td>Trasa</td>
     </tr>
 
 </thead>
   <tbody>
-    <% @athletes.each do |athlete| %>
+    <% @athletes.each_with_index do |athlete, i| %>
       <tr>
+        <td><%= i + 1 %></td>
         <td><%= athlete.first_name %></td>
         <td><%= athlete.last_name %></td>
 
@@ -25,6 +28,7 @@
         <td><%= athlete.city %></td>
 
         <td><%= athlete.team %></td>
+        <td><%= athlete.route.name %></td>
 
       </tr>
     <% end %>
