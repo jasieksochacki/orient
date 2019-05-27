@@ -26,21 +26,24 @@
       <section class="spotlight">
         <div class="content">
           <h2>Podstawowe informacje</h2>
-          <p>Dusiołek Górski: rekreacyjny rajd turystyczny</p>
-<p>Okolica: Beskid Wyspowy</p>
-<p>Start i meta: Wiśniowa koło Dobczyc</p>
-<p>Termin: 18 maja 2019, godzina startu: 8:00</p>
-<p>Dystans:<p>
+          <dl>
+          <dt>Dusiołek Górski: rekreacyjny rajd turystyczny</dt>
+<dt>Okolica: Beskid Wyspowy</dt>
+<dt>Start i meta: Wiśniowa koło Dobczyc</dt>
+<dt>Termin: 18 maja 2019, godzina startu: 8:00</dt>
+<dt>Dystans:<dt>
+  </ dl>
+  <dl>
 <ul>
 <li>
 Dziecięcy: ok. 7 km</li>
 <li>  Klasyczny ok. 35 km
 </li>
 </ul>
-
-<p>Czas: 12 godzin</p>
-<p>Cel: dobra zabawa na świeżym powietrzu!</p>
-<p>Nagrody: satysfakcja i słoik dżemu (wiśniowego!)</p>
+<dt>Czas: 12 godzin</dt>
+<dt>Cel: dobra zabawa na świeżym powietrzu!</dt>
+<dt>Nagrody: satysfakcja i słoik dżemu (wiśniowego!)</dt>
+</dl>
         </div>
         <span class="image"><img src="images/zdj4.jpg" alt="" /></span>
       </section>
@@ -52,7 +55,7 @@ Dziecięcy: ok. 7 km</li>
     <div class="inner">
       <div class="features">
         <section class="content">
-          <span class="icon-wrapper major"><span class="icon fa-pencil"></span></span>
+          <span class="icon-wrapper major"><span class="icon fa-list-alt"></span></span>
           <h3>Zgłoszenia</h3>
             <% Event.active.each do |event| %>
               <%= link_to(event.name, new_athlete_path(event_id: event.id),class: "button" ) %>
@@ -60,7 +63,7 @@ Dziecięcy: ok. 7 km</li>
             <% end %>
         </section>
         <section class="content">
-          <span class="icon-wrapper major"><span class="icon fa-paper-plane"></span></span>
+          <span class="icon-wrapper major"><span class="icon fa-list-ol"></span></span>
           <h3>Listy startowe</h3>
           <% Event.all.order(:event_date).each do |event| %>
             <%= link_to(event.name, athletes_path(event_id: event.id), class: "button" ) %>
@@ -189,22 +192,17 @@ Na mecie XV Dusiołka Górskiego, maj 2018 </p>
           <li>
             <span class="icon-wrapper"><span class="icon fa-envelope"></span></span>
             <h3>Email</h3>
-            <p><a href="#">information@untitled.tld</a></p>
-          </li>
-          <li>
-            <span class="icon-wrapper"><span class="icon fa-twitter"></span></span>
-            <h3>Twitter</h3>
-            <p><a href="#">twitter.com/untitled-tld</a></p>
+            <p>biuro@bajersport.pl</p>
           </li>
           <li>
             <span class="icon-wrapper"><span class="icon fa-phone"></span></span>
             <h3>Numer telefonu</h3>
-            <p>(800) 555-0000</p>
+            <p>606 258 725</p>
           </li>
           <li>
             <span class="icon-wrapper"><span class="icon fa-facebook"></span></span>
             <h3>Facebook</h3>
-            <p><a href="#">https://www.facebook.com/Bajer-Sport-Centrum-Turystyki-Aktywnej-263197297046508/</a></p>
+            <%=link_to 'BAJERSPORT' , "https://www.facebook.com/pg/Bajer-Sport-Centrum-Turystyki-Aktywnej-263197297046508/about/?ref=page_internal"  %>
           </li>
           <li>
             <span class="icon-wrapper"><span class="icon fa-home"></span></span>
@@ -213,11 +211,6 @@ Na mecie XV Dusiołka Górskiego, maj 2018 </p>
         32-400 Myslenice    <br />
             Polska
             </p>
-          </li>
-          <li>
-            <span class="icon-wrapper"><span class="icon fa-linkedin"></span></span>
-            <h3>LinkedIn</h3>
-            <p><a href="#">linkedin.com/untitled-tld</a></p>
           </li>
         </ul>
       </section>
