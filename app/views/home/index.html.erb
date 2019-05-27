@@ -61,8 +61,11 @@ Dziecięcy: ok. 7 km</li>
         </section>
         <section class="content">
           <span class="icon-wrapper major"><span class="icon fa-paper-plane"></span></span>
-          <h3>Kontakt</h3>
-          <p>Pellentesque, ornare sapien quis, tristique ante. Proin nec facilisis odio. Integer elementum nunc nec leo interdum, non tristique eros laoreet. Integer vitae erat suscipit commodo.</p>
+          <h3>Listy startowe</h3>
+          <% Event.all.order(:event_date).each do |event| %>
+            <%= link_to(event.name, athletes_path(event_id: event.id), class: "button" ) %>
+            <br></br>
+          <% end %>
         </section>
         <section class="content">
           <span class="icon-wrapper major"><span class="icon fa-cloud"></span></span>
