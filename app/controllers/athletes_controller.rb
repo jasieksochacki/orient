@@ -1,5 +1,5 @@
 class AthletesController < ApplicationController
-  layout "dusiolek"
+  layout "dusiolek", only: [:index]
 
   before_action :set_athlete, only: [:show]
 
@@ -31,7 +31,7 @@ class AthletesController < ApplicationController
     @routes = @event.routes
     respond_to do |format|
       if @athlete.save
-        format.html { redirect_to @athlete, notice: 'Zawodnik został stworzony' }
+        format.html { redirect_to @athlete, notice: 'Zgłoszenie zostało przyjęteTT' }
         format.json { render :show, status: :created, location: @athlete }
       else
         format.html { render :new }

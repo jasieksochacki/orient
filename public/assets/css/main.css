@@ -2464,7 +2464,7 @@ input, select, textarea {
 		dl dt {
 			display: block;
 			font-weight: 600;
-			margin: 0 0 1em 0;
+			margin: 0 0 0 0;
 		}
 
 		dl dd {
@@ -2970,7 +2970,7 @@ input, select, textarea {
 
 table.start_list {
 	margin-left: 20px;
-	
+
 }
 
 		table tbody tr {
