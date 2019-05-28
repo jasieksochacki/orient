@@ -24,22 +24,28 @@
   </div>
 
   <div class="field">
-    <%= form.label :gender %>
-    <%= form.radio_button(:gender, 'K') %> Kobieta
-    <%= form.radio_button(:gender, 'M') %> Mężczyzna
+
+    <%= form.radio_button(:gender, 'K') %>
+    <%= form.label :gender_k, "Kobieta" %>
+    <%= form.radio_button(:gender, 'M') %>
+    <%= form.label :gender_m, "Mężczyzna" %>
   </div>
 
   <div class="field">
     <%= form.label :birthdate %>
-    <%= form.date_select(:birthdate, start_year: 1920, use_month_numbers: true, order: [:day, :month, :year]) %>
+    <%= form.date_select(:birthdate,  { start_year: 1920, use_month_numbers: true, order: [:day, :month, :year]}, { class: 'date' } ) %>
   </div>
 
   <div class="field">
     <%= form.label :city %>
     <%= form.text_field :city %>
-  </div>  <div class="field"> <%= form.label :route_id %>    <% routes.each do |route| %>
-      <%= form.radio_button(:route_id, route.id) %>
-      <%= route.name %>
+  </div>
+
+  <div class="field">
+
+      <% routes.each do |route| %>
+        <%= form.radio_button(:route_id, route.id) %>
+        <%= form.label "route_id_#{route.id}", route.name %>
     <% end %>
   </div>
 
@@ -60,12 +66,12 @@
 
   <div class="field">
     <%= form.check_box :terms_accepted %>
-    <%= form.label "zapoznałem się z Regulaminem i akceptuję jego postanowienia" %>
+    <%= form.label :terms_accepted, "zapoznałem się z Regulaminem i akceptuję jego postanowienia" %>
   </div>
 
     <div class="field">
       <%= form.check_box :gdpr_accepted %>
-      <%= form.label "Wyrażam zgodę na wykorzystanie i przetwarzanie moich danych osobowych" %>
+      <%= form.label :gdpr_accepted, "Wyrażam zgodę na wykorzystanie i przetwarzanie moich danych osobowych" %>
     </div>
 
 

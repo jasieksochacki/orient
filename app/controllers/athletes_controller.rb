@@ -1,5 +1,5 @@
 class AthletesController < ApplicationController
-  layout "dusiolek", only: [:index]
+  layout "dusiolek"#, only: [:index]
 
   before_action :set_athlete, only: [:show]
 
