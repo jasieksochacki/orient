@@ -1,6 +1,8 @@
 <h1>Lista startowa</h1>
 <h2><%= @event.name %></h2>
+<% @event.routes.each do |route|  %>
 
+<h3><%= route.name %></h3>
 <table border="1px" class="start_list">
 <thead>
     <tr style='background:#ddd;'>
@@ -8,33 +10,24 @@
         </td>
       <td><span class='caps'>Imię</td>
       <td>Nazwisko</td>
-
-
       <td>Miejscowość</td>
-
       <td>Drużyna</td>
-      <td>Trasa</td>
     </tr>
 
 </thead>
   <tbody>
-    <% @athletes.each_with_index do |athlete, i| %>
+    <% route.athletes.each_with_index do |athlete, i| %>
       <tr>
         <td><%= i + 1 %></td>
         <td><%= athlete.first_name %></td>
         <td><%= athlete.last_name %></td>
-
-
         <td><%= athlete.city %></td>
-
         <td><%= athlete.team %></td>
-        <td><%= athlete.route.name %></td>
-
       </tr>
     <% end %>
   </tbody>
 </table>
-
+<% end %>
 <br>
 
 <%= link_to "Strona główna", root_path %>

@@ -1,5 +1,5 @@
 class AthletesController < ApplicationController
-  layout "dusiolek"#, only: [:index]
+  layout "dusiolek", only: [:index]
 
   before_action :set_athlete, only: [:show]
 
@@ -7,7 +7,6 @@ class AthletesController < ApplicationController
   # GET /athletes.json
   def index
     @event = Event.find(params[:event_id])
-    @athletes = @event.athletes
   end
 
   # GET /athletes/1
