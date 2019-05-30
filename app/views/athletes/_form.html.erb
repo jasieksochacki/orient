@@ -1,13 +1,14 @@
 <%= form_with(model: athlete, local: true) do |form| %>
   <% if athlete.errors.any? %>
    <div id="error_explanation">
--      <h2><%= "Zgłoszenie nie może być przyjęte. Ilość błędów: #{athlete.errors.count}" %></h2>
--
--      <ul>
--      <% athlete.errors.full_messages.each do |message| %>
--        <li><%= message %></li>
--      <% end %>
--      </ul>
+      <h2><%= "Zgłoszenie nie może być przyjęte. Ilość błędów: #{athlete.errors.count}" %></h2>
+      <ul>
+       <% athlete.errors.full_messages.each do |message| %>
+               <li><%= message %></li>
+             <% end %>
+
+             </ul>
+
    </div>
   <% end %>
 
@@ -24,7 +25,8 @@
   </div>
 
   <div class="field">
-
+    Płeć
+    <br></br>
     <%= form.radio_button(:gender, 'K') %>
     <%= form.label :gender_k, "Kobieta" %>
     <%= form.radio_button(:gender, 'M') %>
@@ -42,8 +44,9 @@
   </div>
 
   <div class="field">
-
-      <% routes.each do |route| %>
+       Trasa
+       <br></br>
+    <% routes.each do |route| %>
         <%= form.radio_button(:route_id, route.id) %>
         <%= form.label "route_id_#{route.id}", route.name %>
     <% end %>
@@ -76,7 +79,7 @@
 
 
   <div class="actions">
-      <%= form.submit :Prześlij %>
+      <%= form.submit :"  Wyślij zgłoszenie" %>
 
   </div>
   </body>
