@@ -18,7 +18,7 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
-	margin: 1;
+	margin: 0;
 	padding: 1px;
 	border: 1px;
 	font-size: 100%;
@@ -2878,6 +2878,7 @@ input, select, textarea {
 	header.major {
 		margin: 0 0 4em 0;
 	}
+
 
 		header.major > :last-child {
 			margin-bottom: 0;

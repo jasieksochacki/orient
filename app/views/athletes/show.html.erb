@@ -1,59 +1,53 @@
-<section id="main" class="wrapper">
+<section  class="wrapper">
 <div class="inner">
-<header class="major">
 <p id="notice"><%= notice %></p>
-<h1>Zgłoszenie zostało przesłane</h1>
-<h2><%= @event.name %></h2>
-<p>Do zobaczenia <%= I18n.l( @event.event_date) %></p>
-</header>
+<h2>Zgłoszenie zostało przyjęte</h2>
+<h1><%= @event.name %></h1>
+<h5>Do zobaczenia <%= I18n.l( @event.event_date) %></h5>
+
+
 
 <!-- Content -->
+<table border="1px">
+  <tbody>
 <div class="content">
-<p>
-  <strong>Imię:</strong>
-  <%= @athlete.first_name %>
-</p>
+<tr style='background:#ddd;'>
+  <td>Imię i Nazwisko
+    </td>
+    <td><%= @athlete.first_name %>
+    <%= @athlete.last_name %></td>
+  </tr>
 
-<p>
-  <strong>Nazwisko:</strong>
-  <%= @athlete.last_name %>
-</p>
-
-<p>
-  <strong>Płeć:</strong>
-  <%= @athlete.gender %>
-</p>
-
-<p>
-  <strong>Data urodzenia:</strong>
-  <%= @athlete.birthdate %>
-</p>
-
-
-<p>
-  <strong>Miejscowość:</strong>
-  <%= @athlete.city %>
-</p>
-
-<p>
-  <strong>Trasa:</strong>
-  <%= @athlete.route.name %>
-</p>
-
-<p>
-  <strong>Numer telefonu:</strong>
-  <%= @athlete.phone %>
-</p>
-
-<p>
-  <strong>Drużyna:</strong>
-  <%= @athlete.team %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @athlete.email %>
-</p>
+<tr>
+<td>Płeć</td>
+<td>  <%= @athlete.gender %></td>
+</tr>
+<tr>
+<td>Data urodzenia:</td>
+<td>  <%= @athlete.birthdate %></td>
+</tr>
+<tr>
+<td>Miejscowość:</td>
+<td>  <%= @athlete.city %></td>
+  </tr>
+<tr>
+<td>Trasa:</td>
+<td>  <%= @athlete.route.name %></td>
+  </tr>
+  <tr>
+  <td>Numer telefonu:</td>
+  <td>  <%= @athlete.phone %></td>
+    </tr>
+    <tr>
+    <td>Drużyna:</td>
+    <td>  <%= @athlete.team %></td>
+      </tr>
+      <tr>
+      <td>Email:</td>
+      <td>  <%= @athlete.email %></td>
+        </tr>
+</tbody>
+</table>
 
 <%= link_to 'Dalej', root_path %>
 </div>
